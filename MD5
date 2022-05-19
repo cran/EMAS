@@ -1,0 +1,16 @@
+65a7917bd9d6234fecbb41472c3035f3 *DESCRIPTION
+a5e1b3451c311481559773f8ded1e737 *NAMESPACE
+b69732cf301b5e548dbc2fe920bce4af *R/E.result.R
+49daee4144966bcf37060b18379c2dc7 *R/EMAS.manhattan.R
+0bfcae6a982c16f0b5d99e148130b98d *R/Emas.R
+770af964bf0295cd3241409dfe213c5f *R/Mvalue.R
+de1878b91210619b313a0c99c974a8c0 *R/data.m.R
+2ef027bf07b8e5b21f758e373e2663a1 *build/partial.rdb
+ac27f3f822a46579d49e0fbd0c63e5c9 *data/E.result.rda
+2af6a3267ab2b258f478cb2829323520 *data/Mvalue.rda
+5a3a78db46b27f4ea2d3cc20b4cda104 *data/data.m.rda
+58a30dbc37920dc39bf66b480cb8fd40 *man/E.result.Rd
+79641117e800c28b7f861e52e2719f00 *man/EMAS.manhattan.Rd
+5bc1e1a8545fdac72bfd3ae1b09ce123 *man/Emas.Rd
+0206983296880d8b539a8f74471d469b *man/Mvalue.Rd
+13325d035be6229446bf21af7a97eed7 *man/data.m.Rd
