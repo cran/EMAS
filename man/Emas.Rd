@@ -13,6 +13,8 @@ Emas(
   x.cov = c(),
   y.cov = c(),
   m.cov = c(),
+  mem.sav = FALSE,
+  p.th = 0.1,
   ini.sims = 100,
   boot = FALSE,
   cl.n = 1,
@@ -34,41 +36,33 @@ Emas(
 
 \item{m.cov}{Variable names of covariates related to mediator(m).}
 
+\item{mem.sav}{A logical value. If 'TRUE', the memory required for the function will decrease, but the speed will also decrease.}
+
+\item{p.th}{Sobel indirect effects P-value threshold for subsequent nonparametric bootstrap or quasi-Bayesian approximation mediation analyses.}
+
 \item{ini.sims}{Initial number of Monte Carlo draws for nonparametric bootstrap or quasi-Bayesian approximation.}
 
-\item{boot}{A logical value. if 'FALSE' a quasi-Bayesian approximation is used for confidence intervals; if 'TRUE' nonparametric bootstrap will be used. Default is 'FALSE'.}
+\item{boot}{A logical value. If 'FALSE' a quasi-Bayesian approximation is used for confidence intervals; if 'TRUE' nonparametric bootstrap will be used. Default is 'FALSE'.}
 
 \item{cl.n}{Number of cores used for parallel computing.}
 
-\item{...}{Other arguments passed to \code{mediated} and \code{boot}.}
+\item{...}{Other arguments passed to \code{\link{makeCluster}}.}
 }
 \value{
 \code{Emas} returns a data.frame with the average mediation effects(AME), 
    average direct effects(ADE), total effects, mediation proportion.
-   
-   AMEEst: Point estimates for average mediation effects under the exposure conditions.
-   
-   AMElow95, AMEupp95: 95 percentage confidence intervals for average mediation effects.
-   
-   AME.P: Two-sided p-values for average mediation effects.
-   
-   ADEEst: Point estimates for average direct effect under the exposure conditions.
-   
-   ADElow95, ADEupp95: 95 percentage confidence intervals for average direct effects.
-   
-   ADE.P: Two-sided p-values for average direct effects.
-   
-   TotEst: Point estimate for total effect.
-   
-   Totlow95, Totupp95: 95 percentage confidence interval for total effect.
-   
-   Tot.P: Two-sided p-values for total effect.
-   
-   PropEst: The 'proportions mediated', or the size of the average mediation effects relative to the total effect.
-   
-   Proplow95, Propupp95: 95 percentage confidence intervals for the proportions mediated.
-   
-   Prop.p: Two-sided p-values for proportions mediated.
+\itemize{
+    \item{AMEEst: }{Point estimates for average mediation effects under the exposure conditions.}
+    \item{AMElow95, AMEupp95: }{95 percentage confidence intervals for average mediation effects.}
+    \item{AME.P: }{Two-sided p-values for average mediation effects.}
+    \item{ADEEst: }{Point estimates for average direct effect under the exposure conditions.}
+    \item{ADElow95, ADEupp95: }{95 percentage confidence intervals for average direct effects.}
+    \item{ADE.P: }{Two-sided p-values for average direct effects.}
+    \item{TotEst: }{Point estimate for total effect.}
+    \item{Totlow95, Totupp95: }{95 percentage confidence interval for total effect.}
+    \item{Tot.P: }{Two-sided p-values for total effect.}
+    \item{PropEst: }{The "proportions mediated", or the size of the average mediation effects relative to the total effect.}
+}
 }
 \description{
 This function can perform the Epigenome-Wide Mediation Analysis Study (EMAS).
@@ -83,7 +77,7 @@ E.result <- Emas(data.m, Mvalue, id = "ID", x = "x", y = "y",
                  x.cov = c("age", "gender"),
                  y.cov = c("age", "gender"),
                  m.cov = c("age", "gender", "CD8T", "CD4T"), 
-                 ini.sims = 100, boot = FALSE, cl.n = 1)}
+                 p.th = 0.1, ini.sims = 100, boot = FALSE, cl.n = 1)}
 }
 \references{
 Tingley, D., Yamamoto, T., Hirose, K., Imai, K. and Keele, L. (2014). mediation: R package for Causal Mediation Analysis.

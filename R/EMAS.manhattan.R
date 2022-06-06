@@ -4,11 +4,11 @@
 #'
 #' @details This function can plot a manhattan plot from the \code{Emas} results according to the annotation from 450k or EPIC.
 #'
-#' @param x A data.frame produced by \code{Emas}.
+#' @param E.result A data.frame produced by \code{Emas}.
 #'
 #' @param type A character string indicating the type of annotation, only "EPIC" and "450k" are available. 
 #'
-#' @param ... Other arguments passed to \code{manhattan}.
+#' @param ... Other arguments passed to \code{\link{manhattan}}.
 #'
 #' @export
 #'
@@ -28,7 +28,7 @@
 #' EMAS.manhattan(E.result, type = "EPIC",
 #'                genomewideline = -log10(0.05/2000),
 #'                suggestiveline = -log10(1/100), ylim=c(0,5))}
-EMAS.manhattan <- function(x, type = "EPIC", ...){
+EMAS.manhattan <- function(E.result, type = "EPIC", ...){
   CpG <- chr <- pos <- AME.P <- NULL
   if(type != "450k" & type != "EPIC"){
     stop("At present, this function can only draw Manhattan diagrams of 450k and EPIC.")
@@ -37,8 +37,8 @@ EMAS.manhattan <- function(x, type = "EPIC", ...){
     annEPIC <- getAnnotation("IlluminaHumanMethylationEPICanno.ilm10b4.hg19")
     ann <- annEPIC
     ann$CpG <- row.names(ann)
-    x$CpG <- row.names(x)
-    manhz <- merge(x, ann, by="CpG", all.x=T)
+    E.result$CpG <- row.names(E.result)
+    manhz <- merge(E.result, ann, by="CpG", all.x=T)
     manh <- subset(manhz, select=c(CpG, chr, pos, AME.P))
     manh$CHR <- as.numeric(substr(manh$chr, 4, nchar(manh$chr))) 
     manhattan(manh, chr = "CHR",bp="pos", snp = "CpG", p="AME.P", ...)
@@ -47,8 +47,8 @@ EMAS.manhattan <- function(x, type = "EPIC", ...){
     ann450k <- getAnnotation("IlluminaHumanMethylation450kanno.ilmn12.hg19")
     ann <- ann450k
     ann$CpG <- row.names(ann)
-    x$CpG <- row.names(x)
-    manhz <- merge(x, ann, by="CpG", all.x=T)
+    E.result$CpG <- row.names(E.result)
+    manhz <- merge(E.result, ann, by="CpG", all.x=T)
     manh <- subset(manhz, select=c(CpG, chr, pos, AME.P))
     manh$CHR <- as.numeric(substr(manh$chr, 4, nchar(manh$chr))) 
     manhattan(manh, chr = "CHR",bp="pos", snp = "CpG", p="AME.P", ...)

@@ -5,7 +5,7 @@
 \alias{E.result}
 \title{An \code{Emas} results data.}
 \format{
-A data.frame produced by \code{Emas} contains 2000 obs of 16 variables.
+A data.frame produced by \code{Emas} contains 2000 obs of 13 variables.
 }
 \usage{
 E.result

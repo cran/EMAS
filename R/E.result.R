@@ -6,5 +6,5 @@
 #' @keywords  datasets
 #' @name E.result
 #' @usage E.result
-#' @format A data.frame produced by \code{Emas} contains 2000 obs of 16 variables.
+#' @format A data.frame produced by \code{Emas} contains 2000 obs of 13 variables.
 NULL

@@ -4,14 +4,14 @@
 \alias{EMAS.manhattan}
 \title{Plotting the manhattan plot from the EMAS results}
 \usage{
-EMAS.manhattan(x, type = "EPIC", ...)
+EMAS.manhattan(E.result, type = "EPIC", ...)
 }
 \arguments{
-\item{x}{A data.frame produced by \code{Emas}.}
+\item{E.result}{A data.frame produced by \code{Emas}.}
 
 \item{type}{A character string indicating the type of annotation, only "EPIC" and "450k" are available.}
 
-\item{...}{Other arguments passed to \code{manhattan}.}
+\item{...}{Other arguments passed to \code{\link{manhattan}}.}
 }
 \value{
 No return value, called for side effects.
