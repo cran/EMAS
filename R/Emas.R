@@ -101,7 +101,7 @@ Emas <- function(data, M.matrix,
     gc()
   }
   
-  message(paste("A total of", snum, "were included in the EMAS.", sep = " "))
+  message(paste("A total of", snum, "samples were included in the EMAS.", sep = " "))
   
   x.c <- x.cov[1]
   for (i in x.cov[-1]) {
@@ -202,7 +202,7 @@ Emas <- function(data, M.matrix,
   
   pzhi <- data.frame(pzhi)
   pzhi <- data.frame(t(pzhi))
-  message(paste("A total of", dim(pzhi)[1], "were included in the EMAS.", sep = " "))
+  message(paste("A total of", dim(pzhi)[1], "mediators were included in the EMAS.", sep = " "))
   pzhi.b <- pzhi[order(pzhi$AME.P),]
   i <- pzhi.b[1,4]
   

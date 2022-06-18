@@ -1,13 +1,14 @@
-a2e4909b3d43017233dde80ceeea5f75 *DESCRIPTION
-e5fce12aa933742470be54f2aae7d042 *NAMESPACE
+a3d6f48430094674dc4211606ac2900a *DESCRIPTION
+257a26e53496f8808cb8d6db424960b5 *NAMESPACE
 f458dea56e9082759a1610f463b49940 *R/E.result.R
 5faf7e52bccc0f575e7cb9b39379f6bd *R/EMAS.manhattan.R
 78f0698d6aaa9503c3c54f9494281e68 *R/EMAS.volcano.R
-45e14a578ce94aea093583076c6a2270 *R/Emas.R
+929123b9ba21a1a47c1ce00d2afc345e *R/Emas.R
+5668fa933f83e10ad186d8577ee3c206 *R/Emas.parallel.R
 770af964bf0295cd3241409dfe213c5f *R/Mvalue.R
 de1878b91210619b313a0c99c974a8c0 *R/data.m.R
 bb6561ae625e831030aabc910048c1c9 *R/open.R
-ce5f9206dca808ec9d8a03706176d161 *build/partial.rdb
+d8e2e4c8614c442291bed0316bfe765f *build/partial.rdb
 d47baae2ff30db6f667da5c8e4683f35 *data/E.result.rda
 2af6a3267ab2b258f478cb2829323520 *data/Mvalue.rda
 5a3a78db46b27f4ea2d3cc20b4cda104 *data/data.m.rda
@@ -15,5 +16,6 @@ d47baae2ff30db6f667da5c8e4683f35 *data/E.result.rda
 81a93dc855c0b182f93e3b174ef281a6 *man/EMAS.manhattan.Rd
 48c1172422896a1846f64f8b8f060e8c *man/EMAS.volcano.Rd
 5f3661f0ee2740fa8976677a4803ed40 *man/Emas.Rd
+9d036d3324417e1cf6d6ba8c4b6610eb *man/Emas.parallel.Rd
 0206983296880d8b539a8f74471d469b *man/Mvalue.Rd
 13325d035be6229446bf21af7a97eed7 *man/data.m.Rd
