@@ -12,6 +12,6 @@
      ------------------------------
 "
   mes2 <- "    If you have any question or suggestion about EMAS, please email to niexiuquan1995@foxmail.com.\n     ------------------------------\n"
-  packageStartupMessage(">> Package version 0.2.0 loaded <<\n",mes,mes2)
+  packageStartupMessage(">> Package version 0.2.2 loaded <<\n",mes,mes2)
 }
 

@@ -5,7 +5,7 @@
 \alias{Mvalue}
 \title{A M-value matrix for 221 participants}
 \format{
-A matrix contains 221 obs of 2000 CpGs.
+A matrix contains 221 obs of 10 CpGs.
 }
 \usage{
 Mvalue

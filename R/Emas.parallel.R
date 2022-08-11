@@ -44,8 +44,7 @@
 #' @examples
 #' \donttest{data(data.m)
 #' data(Mvalue)
-#' Mvalue.10 <- Mvalue[c(1:10),]
-#' EP.result <- Emas.parallel(data.m, Mvalue.10, 
+#' EP.result <- Emas.parallel(data.m, Mvalue, 
 #'                            id = "ID", x = "x", y = "y", 
 #'                            x.cov = c("age", "gender"), 
 #'                            y.cov = c("age", "gender"), 
@@ -172,16 +171,15 @@ Emas.parallel <- function(data, M.matrix,
   capture.output(sfit <- lavaan::summary(fit))
   if (m.cor == TRUE) {
     AME <- sfit$PE[c((3*mnum+4+(mnum*(mnum-1)/2)):(4*mnum+3+(mnum*(mnum-1)/2))), c(6:9)]
-    row.names(AME) <- canm
     ADE.Tot <- sfit$PE[c(mnum+1, (4*mnum+4+(mnum*(mnum-1)/2))), c(6:9)]
-    row.names(ADE.Tot) <- c("ADE", "Tot")
     result <- rbind(AME, ADE.Tot)
   } else {
     AME <- sfit$PE[c((3*mnum+4):(4*mnum+3)), c(6:9)]
-    row.names(AME) <- canm
     ADE.Tot <- sfit$PE[c(mnum+1, (4*mnum+4)), c(6:9)]
-    row.names(ADE.Tot) <- c("ADE", "Tot")
     result <- rbind(AME, ADE.Tot)
+  }
+  if (!is.null(result)) {
+    row.names(result) <- c(canm, c("ADE", "Tot"))
   }
   if (lavaan == TRUE) {
     result.l <- list(result = result, lavaan = fit)

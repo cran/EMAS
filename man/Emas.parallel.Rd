@@ -55,8 +55,7 @@ This function can perform the parallel multiple mediation model after the Epigen
 \examples{
 \donttest{data(data.m)
 data(Mvalue)
-Mvalue.10 <- Mvalue[c(1:10),]
-EP.result <- Emas.parallel(data.m, Mvalue.10, 
+EP.result <- Emas.parallel(data.m, Mvalue, 
                            id = "ID", x = "x", y = "y", 
                            x.cov = c("age", "gender"), 
                            y.cov = c("age", "gender"), 

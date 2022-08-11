@@ -270,6 +270,7 @@ Emas <- function(data, M.matrix,
     pzhi.s <- data.frame(pzhi.s)
     pzhi.s <- pzhi.s[order(pzhi.s$AME.P),]
     i <- pzhi.s[1,4]
+    pzhi.b <- rbind(pzhi.s, pzhi.bout)
   }
   
   shu <- 1
@@ -308,6 +309,7 @@ Emas <- function(data, M.matrix,
     pzhi.s <- pzhi.s[order(pzhi.s$AME.P),]
     i <- pzhi.s[1,4]
     shu <- shu + 1
+    pzhi.b <- rbind(pzhi.s, pzhi.bout)
     
     if(i != 0){
       cn <- rownames(pzhi.s0)
@@ -331,8 +333,8 @@ Emas <- function(data, M.matrix,
       pzhi.r <- data.frame(pzhi.r)
       pzhi.s <- rbind(pzhi.r, pzhi.s1)
       pzhi.s <- pzhi.s[order(pzhi.s$AME.P),]
+      pzhi.b <- rbind(pzhi.s, pzhi.bout)
     }
   }
-  pzhi.b <- rbind(pzhi.s, pzhi.bout)
   return(pzhi.b)
 }

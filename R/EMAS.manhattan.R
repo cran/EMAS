@@ -16,6 +16,8 @@
 #'
 #' @importFrom "minfi" "getAnnotation"
 #' @importFrom "qqman" "manhattan"
+#' @import IlluminaHumanMethylationEPICanno.ilm10b4.hg19
+#' @import IlluminaHumanMethylation450kanno.ilmn12.hg19
 #' 
 #' @author Xiuquan Nie, niexiuquan1995@foxmail.com
 #' 

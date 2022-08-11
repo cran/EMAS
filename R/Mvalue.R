@@ -6,5 +6,5 @@
 #' @keywords  datasets
 #' @name Mvalue
 #' @usage Mvalue
-#' @format A matrix contains 221 obs of 2000 CpGs.
+#' @format A matrix contains 221 obs of 10 CpGs.
 NULL
