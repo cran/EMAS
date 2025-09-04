@@ -24,7 +24,7 @@
 #'
 #' @param lavaan A logical value. If 'TRUE', a lavaan object will be given.
 #' 
-#' @param ... Other arguments passed to \code{\link{sem}} from \code{\link{lavaan}} package.
+#' @param ... Other arguments passed to \code{\link[lavaan]{sem}}.
 #'
 #' @export
 #'

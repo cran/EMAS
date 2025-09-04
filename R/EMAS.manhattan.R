@@ -8,7 +8,7 @@
 #'
 #' @param type A character string indicating the type of annotation, only "EPIC" and "450k" are available. 
 #'
-#' @param ... Other arguments passed to \code{\link{manhattan}}.
+#' @param ... Other arguments passed to \code{\link[qqman]{manhattan}}.
 #'
 #' @export
 #'

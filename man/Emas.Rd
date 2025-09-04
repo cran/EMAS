@@ -46,12 +46,11 @@ Emas(
 
 \item{cl.n}{Number of cores used for parallel computing.}
 
-\item{...}{Other arguments passed to \code{\link{makeCluster}}.}
+\item{...}{Other arguments passed to \code{\link[parallel]{makeCluster}}.}
 }
 \value{
 \code{Emas} returns a data.frame with the average mediation effects(AME), 
    average direct effects(ADE), total effects, mediation proportion.
-\itemize{
     \item{AMEEst: }{Point estimates for average mediation effects under the exposure conditions.}
     \item{AMElow95, AMEupp95: }{95 percentage confidence intervals for average mediation effects.}
     \item{AME.P: }{Two-sided p-values for average mediation effects.}
@@ -62,7 +61,6 @@ Emas(
     \item{Totlow95, Totupp95: }{95 percentage confidence interval for total effect.}
     \item{Tot.P: }{Two-sided p-values for total effect.}
     \item{PropEst: }{The "proportions mediated", or the size of the average mediation effects relative to the total effect.}
-}
 }
 \description{
 This function can perform the Epigenome-Wide Mediation Analysis Study (EMAS).

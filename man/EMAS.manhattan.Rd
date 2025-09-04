@@ -11,7 +11,7 @@ EMAS.manhattan(E.result, type = "EPIC", ...)
 
 \item{type}{A character string indicating the type of annotation, only "EPIC" and "450k" are available.}
 
-\item{...}{Other arguments passed to \code{\link{manhattan}}.}
+\item{...}{Other arguments passed to \code{\link[qqman]{manhattan}}.}
 }
 \value{
 No return value, called for side effects.

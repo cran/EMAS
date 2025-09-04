@@ -40,7 +40,7 @@ Emas.parallel(
 
 \item{lavaan}{A logical value. If 'TRUE', a lavaan object will be given.}
 
-\item{...}{Other arguments passed to \code{\link{sem}} from \code{\link{lavaan}} package.}
+\item{...}{Other arguments passed to \code{\link[lavaan]{sem}}.}
 }
 \value{
 \code{Emas.parallel} returns a data.frame with the average mediation effects(AME), 
